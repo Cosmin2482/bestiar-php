@@ -1,0 +1,14 @@
+<h2 class="homm-title" style="margin: .5rem 0 1rem;">Creaturile din Bestiar</h2>
+
+<div class="creature-grid">
+  <div class="creature-card homm-card" *ngFor="let c of creatures">
+    <img [src]="c.image" [alt]="c.name">
+    <div class="info">
+      <h3 class="homm-title">{{ c.name }}</h3>
+      <p><strong>Origine:</strong> {{ c.origin }}</p>
+      <p><strong>Puteri:</strong> {{ c.powers.join(', ') }}</p>
+      <p><strong>Pericol:</strong> {{ c.dangerLevel }}/10</p>
+      <button class="homm-btn"><span class="homm-btn__gem"></span> Detalii</button>
+    </div>
+  </div>
+</div>

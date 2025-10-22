@@ -1,0 +1,34 @@
+<section class="homm-panel" style="padding:1rem; margin:1rem 0;">
+  <div class="carousel pixelated"
+       tabindex="0" aria-roledescription="carousel"
+       (keydown)="onKey($event)"
+       (pointerdown)="onPointerDown($event)" (pointerup)="onPointerUp($event)">
+    <img [src]="current().src" [alt]="current().alt" />
+    <div class="caption">
+      <h2 class="homm-title">{{ current().title }}</h2>
+      <p *ngIf="current().subtitle as sub">{{ sub }}</p>
+      <div class="controls">
+        <button class="homm-btn" (click)="prev()"><span class="homm-btn__gem"></span> ◀</button>
+        <button class="homm-btn" (click)="next()"><span class="homm-btn__gem"></span> ▶</button>
+      </div>
+    </div>
+    <div class="dots">
+      <button *ngFor="let s of slides; index as i"
+              [class.active]="i === idx()"
+              (click)="goto(i)"></button>
+    </div>
+  </div>
+</section>
+
+<section class="grid">
+  <article class="homm-card tile">
+    <h3 class="homm-title">Bestiarul</h3>
+    <p>Catalog mitologic cu creaturi, origini și puteri. Dark UI, vibe de muzeu gotic.</p>
+    <a routerLink="/creatures" class="homm-btn"><span class="homm-btn__gem"></span> Vezi creaturile</a>
+  </article>
+  <article class="homm-card tile">
+    <h3 class="homm-title">Legendarium</h3>
+    <p>Adaugă, editează și clasifică monștri. Îmblânzește CRUD-ul ca un arcanist.</p>
+    <a routerLink="/creatures" class="homm-btn"><span class="homm-btn__gem"></span> Începe</a>
+  </article>
+</section>

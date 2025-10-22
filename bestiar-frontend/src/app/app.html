@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" routerLink="/">
+      <span class="brand__emblem"></span>
+      <h1 class="brand__title">Bestiar</h1>
+    </a>
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Acasă</a>
+      <a routerLink="/creatures" routerLinkActive="active">Creaturi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:1rem 0 2rem;">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© {{ currentYear }} Bestiar — „Veni, vidi, invocat draconem.”</div>
+</footer>

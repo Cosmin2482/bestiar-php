@@ -1,0 +1,53 @@
+/* ===== Bestiar Theme ===== */
+:root {
+  --bg: #0f0f10;
+  --panel: #17171a;
+  --ink: #eaeaea;
+  --muted: #9aa0a6;
+  --accent: #ff7a18;      /* orange dragon */
+  --accent-2: #e83e8c;    /* roz-mistic */
+  --ring: rgba(255, 122, 24, .35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: radial-gradient(1000px 500px at 10% -10%, #1b1b1f 0, var(--bg) 40%),
+              radial-gradient(800px 400px at 110% 10%, #1a1313 0, transparent 50%),
+              var(--bg);
+  color: var(--ink);
+}
+
+/* utilities */
+.container { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.35);
+}
+.btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: 0; color: #fff; padding: .6rem .9rem; border-radius: 10px; cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+
+/* header/footer polish */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,.45);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+nav a { color: var(--ink); text-decoration: none; margin-right: 1rem; }
+nav a.active { color: var(--accent); }
+.site-footer { text-align:center; padding: 1rem; color: var(--muted); }
+
+/* responsive */
+@media (max-width: 640px){
+  nav { display:flex; gap:.5rem; flex-wrap:wrap }
+}

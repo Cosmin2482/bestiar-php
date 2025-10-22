@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Spectral:wght@400;600&display=swap');
+
+:root{
+  --gold:#d4af37; --gold-deep:#b88916; --ruby:#b83434;
+  --stone:#2b2f3a; --parch:#d7c7a0; --text:#eae6da; --muted:#bfb7a3;
+}
+
+html,body{height:100%;}
+body {
+  background: url('assets/textures/panel-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Cinzel Decorative', serif;
+  color: #f8f3e8;
+}
+
+.container {
+  background: rgba(20, 10, 0, 0.7);
+  border: 3px solid gold;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(255, 200, 50, 0.2);
+}
+
+/* Header / nav */
+.site-header{
+  position:sticky; top:0; z-index:20;
+  background:#1a1a1f; border-bottom:2px solid var(--gold-deep);
+  box-shadow: inset 0 -3px 0 var(--gold);
+}
+.site-header .bar{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;}
+.brand__title{margin:0;font-family:'Cinzel Decorative',serif;color:var(--gold);font-size:1.4rem;text-shadow:0 2px 0 #7d5a0a;}
+.nav a{color:#efe6cc;text-decoration:none;font-weight:600;margin-left:1rem;padding:.35rem .6rem;border-radius:6px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.15);}
+.nav a.active{border-color:var(--gold);color:var(--gold);box-shadow:0 0 10px rgba(212,175,55,.4);}
+
+/* „Pergament” + card */
+.homm-panel{
+  background:#cdbb91;
+  border: 24px solid transparent;
+  /* pune imagine când ai asset-ul: border-image:url('assets/ui/gold-frame.png') 24 round; */
+  box-shadow:0 12px 40px rgba(0,0,0,.55); color:#2b2318;
+}
+.homm-card{
+  background:#d9c9a6;
+  border:8px solid transparent;
+  /* border-image:url('assets/ui/gold-frame.png') 8 round; */
+  box-shadow:0 10px 30px rgba(0,0,0,.5); color:#2b2318;
+}
+
+/* Buton „bijuterie” */
+.homm-btn{
+  display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
+  padding:.5rem .9rem;color:#291b06;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+  background:linear-gradient(#e4c27a,#c2922b); border:3px solid #6f4d10;border-radius:10px;
+  box-shadow:inset 0 3px 0 #fff3c7,inset 0 -3px 0 #7a4f12,0 6px 0 #3d2a08,0 10px 20px rgba(0,0,0,.5);
+}
+.homm-btn:hover{filter:brightness(1.06);}
+.homm-title{font-family:'Cinzel Decorative',serif;color:var(--gold);text-shadow:0 2px 0 #7d5a0a,0 0 10px rgba(212,175,55,.35);}
+
+.container{max-width:1180px;margin:0 auto;padding:0 16px;}
+.site-footer{border-top:1px solid rgba(255,255,255,.1);padding:1rem 2rem;text-align:center;color:var(--muted);}
